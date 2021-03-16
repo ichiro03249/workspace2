@@ -1,0 +1,19 @@
+package chap08_02;
+
+public class CarMain {
+
+	public static void main(String[] args) {
+		// TODO 自動生成されたメソッド・スタブ
+
+			Car c = new Car();
+			c.fuel = 5;
+			c.speed = 30;
+
+			c.run(1);
+			c.accelarate(15);
+			c.showMeter();
+			c.stop();
+
+	}
+
+}

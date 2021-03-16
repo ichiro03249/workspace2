@@ -1,0 +1,28 @@
+package chap08_02;
+
+public class Cleric {
+
+		String name;
+		int hp;
+		final int MAXHP = 50;
+		int mp;
+		final int MAXMP = 10;
+
+		public void selfAid() {
+			this.mp -= 5;
+			this.hp = MAXHP;
+			System.out.println("MPを５使った");
+			System.out.println("HPがMAXになった");
+			//mp-5 = maaxhp.
+		}
+		public void pray(int sec) {
+
+			int num = new java.util.Random().nextInt(3);
+			int reMp = num + this.mp;
+			System.out.println(this.name + "は、祈ってMPが" + reMp + "回復した！");
+//
+		}
+
+
+
+}

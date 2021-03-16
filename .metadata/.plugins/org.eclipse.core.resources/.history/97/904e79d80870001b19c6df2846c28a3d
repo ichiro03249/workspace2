@@ -1,0 +1,40 @@
+package chap08_02;
+
+public class Cleric {
+
+	String name;
+	int hp;
+	final int MAXHP = 50;
+	int mp;
+	final int MAXMP = 10;
+
+	public void selfAid() {
+		this.mp -= 5;
+		this.hp = MAXHP;
+		System.out.println("MPを５使った");
+		System.out.println("HPがMAXになった");
+		//mp-5 = maaxhp.
+	}
+
+	public int pray(int sec) {
+
+		int num = new java.util.Random().nextInt(3);
+		int reMp = num + sec;
+//		int result = this.mp + reMp;
+		int result2 = this.mp + reMp;
+		int t = Math.min(this.MAXMP,result2);
+//		if (result <= 10) {
+//			System.out.println(this.name + "は、祈ってMP" + this.mp + "に" + reMp + "足されて" + result + "になった！");
+//			System.out.println("今のMPは、" + result);
+//
+//		} else if (result >= 11) {
+//			System.out.println(this.name + "は、祈ってMP" + this.mp + "に" + reMp + "足されて最大MP10になった！");
+//			System.out.println("今のMPは、10");
+//
+//		}
+		return t;
+	}
+
+	//セカンド足す　最大ｍｐを超えない
+
+}
